@@ -28,7 +28,6 @@ function checksCreateTodosUserAvailability(request, response, next) {
      if(user.todos.length > 10 && !user.pro){
          return response.status(403).json({message: 'Seu plano é grátis, podendo apenas criar 10 TODO'})
      }
-
     return next();
 
 }
